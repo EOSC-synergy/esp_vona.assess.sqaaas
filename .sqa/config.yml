@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona git:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-pumpkin-wallaby.sh
-        container: qc.acc_gamy-mustard-rhinoceros
+        - /usr/bin/env sh .sqa/script.skanky-fuchsia-mayfly.sh
+        container: qc.acc_sleazy-linen-boar
   QC.Doc:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-heliotrope-penguin.sh
-        container: qc.doc_paltry-sapphire-dragon
+        - /usr/bin/env sh .sqa/script.cloudy-maroon-molly.sh
+        container: qc.doc_fuzzy-coral-quetzal
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-wisteria-rat.sh
-        container: qc.doc_crabby-gold-saola
+        - /usr/bin/env sh .sqa/script.greasy-lime-chow.sh
+        container: qc.doc_crabby-apricot-audemer
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-azure-lynx.sh
-        container: qc.doc_jumpy-orange-emu
+        - /usr/bin/env sh .sqa/script.gamy-purple-russel.sh
+        container: qc.doc_silly-ecru-kangaroo
   QC.Lic:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-magenta-dogfish.sh
-        container: qc.lic_seedy-tangerine-spoonbill
+        - /usr/bin/env sh .sqa/script.crappy-saffron-spoonbill.sh
+        container: qc.lic_sickly-cardinal-dalmatian
   QC.Sec:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-cerise-dingo.sh
-        container: qc.sec_squeaky-mauve-centipede
+        - /usr/bin/env sh .sqa/script.foggy-green-whale.sh
+        container: qc.sec_craggy-pink-ant
   QC.Sty:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-lemon-centipede.sh
-        container: qc.sty_homely-ochre-heron
+        - /usr/bin/env sh .sqa/script.stuffy-vermilion-chihuahua.sh
+        container: qc.sty_surly-smalt-octopus
   QC.Uni:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-wisteria-barracuda.sh
-        container: qc.uni_scaly-grey-kiwi
+        - /usr/bin/env sh .sqa/script.tacky-aquamarine-bobcat.sh
+        container: qc.uni_bluesy-bistre-gopher
   QC.Ver:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-chocolate-squid.sh
-        container: qc.ver_queasy-razzmatazz-alligator
+        - /usr/bin/env sh .sqa/script.craggy-platinum-neanderthal.sh
+        container: qc.ver_woozy-apricot-zonkey
 timeout: 5400
