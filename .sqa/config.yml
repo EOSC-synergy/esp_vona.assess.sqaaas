@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona:
+      branch: main
+      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-pumpkin-wallaby.sh
+        container: qc.acc_gamy-mustard-rhinoceros
+  QC.Doc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-heliotrope-penguin.sh
+        container: qc.doc_paltry-sapphire-dragon
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-wisteria-rat.sh
+        container: qc.doc_crabby-gold-saola
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-azure-lynx.sh
+        container: qc.doc_jumpy-orange-emu
+  QC.Lic:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-magenta-dogfish.sh
+        container: qc.lic_seedy-tangerine-spoonbill
+  QC.Sec:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-cerise-dingo.sh
+        container: qc.sec_squeaky-mauve-centipede
+  QC.Sty:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-lemon-centipede.sh
+        container: qc.sty_homely-ochre-heron
+  QC.Uni:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-wisteria-barracuda.sh
+        container: qc.uni_scaly-grey-kiwi
+  QC.Ver:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/esp_vona get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-chocolate-squid.sh
+        container: qc.ver_queasy-razzmatazz-alligator
+timeout: 5400
